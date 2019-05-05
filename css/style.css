@@ -1,5 +1,5 @@
 body{
-
+	
 }
 
 /* Typography */
@@ -51,7 +51,144 @@ textarea {
 }
 
 /* Layout */
+body{
+font-family: 'Poppins', sans-serif;
+}
 .ba-container{
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
+	max-width: 1170px;
+	margin: 0 auto;
+}
+.ba-header{
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 30px;
+}
+.ba-header .ba-container{
+	display: flex;
+	justify-content: space-between;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.logo{
+	margin: 0;
+}
+.logo_link{
+	text-decoration: none;
+	color: #fff;
+	font-size: 33px;
+}
+
+
+.menu{
+	display: flex;
+	list-style: none;
+}
+
+.menu_item + .menu_item{
+	margin-left: 30px;
+	
+}
+.menu_item{
+	overflow: hidden;
+}
+.menu_link{
+	text-decoration: none;
+	color: #fff;
+	font-weight: 500;
+	position: relative;
+	
+}
+.menu_link:after{
+content: '';
+position: absolute;
+left: 0;
+bottom: 0;
+transform: translateX(-100%);
+width: 100%;
+height: 1px;
+background: #e71cb4;
+display: inline-block;
+transition: left .2s, height .5s;
+transition-timing-function: cubic-bezier(0.42, 0, 0, 1.12);
+}
+.menu_link:hover, .menu_link:focus{
+	color: #e71cb4;
+}
+.menu_link:hover:after,
+.menu_link:focus{
+	transform: translateX(0);
+	height: 3px;
+}
+	
+.ba-hero{
+	background-image: url("../img/ezra-comeau-jeffrey-77199-unsplash.jpg");
+	background-color: #000;
+	-webkit-background-size: cover;
+	    -o-background-size: cover;
+	   `   background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	text-align: center;
+	color: #fff;
+	display: flex;
+	-webkit-align-items: center;
+	        align-items: center;
+	justify-content: center;
+}
+.ba_hero_title{
+	font-size: 60px;
+	
+}
+.ba_hero_text{
+	font-size: 30px;
+	margin-bottom: 1.8em;
+}
+.ba_hero_btn{
+	border-radius: 10px;
+	border: 2px solid rgb(221, 221, 221);
+	height: 54px;
+	font-weight: 500;
+	color: #fff;
+	display: inline-flex;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	text-decoration: none;
+	padding: 0 1.25em;
+}
+.ba_hero_btn:hover, .ba_hero_btn:focus{
+	background-color: #FFF;
+	color: #000;
+}
+.arrow{
+	position: relative;
+	font-size: 16px;
+	padding-left: 74px;
+}
+.arrow-number{
+	color: yellow;
+	font-size: 1.5em;
+	margin-right: 35px;
+}
+.arrow:before,
+.arrow:after{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 15px;
+	width: 3px;
+	background-color: tomato;
+	display: inline-block;
+}
+.arrow:before{
+	transform: rotate(45deg);
+	top: 9px;
+}
+.arrow:after{
+	transform: rotate(-45deg);
 }
